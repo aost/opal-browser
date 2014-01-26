@@ -10,8 +10,8 @@ cap['platform']        = ENV['SELENIUM_PLATFORM'] || 'ANY'
 cap['browser']         = ENV['SELENIUM_BROWSER'] || 'chrome'
 cap['browser_version'] = ENV['SELENIUM_VERSION'] if ENV['SELENIUM_VERSION']
 
-cap['browserstack.tunnel'] = 'true'
-cap['browserstack.debug']  = 'false'
+cap['browserstack.tunnel_identifier'] = ENV['TRAVIS_JOB_ID']
+cap['browserstack.tunnel']            = 'true'
 
 print 'Loading...'
 
